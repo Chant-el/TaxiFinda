@@ -1,0 +1,15 @@
+<!-- <p>find-taxi works!</p> -->
+
+<div class="center">
+    <form #rankEnquiry="ngForm" (ngSubmit)="onSubmit(rankEnquiry)"  >
+        <!-- <div class="form-group">
+          <label for="InputSuburbLocation">Your Location</label>
+          <input name="location" type="text" [(ngModel)]="userLocation" class="form-control" id="InputSuburbLocation" placeholder="Enter your current location(suburb)">
+        </div> -->
+        <div class="form-group">
+          <label for="InputDestination">Destination</label>
+          <input name="destination" type="text" [(ngModel)]="userDestination" class="form-control" id="InputDestination" placeholder="Your Destination">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+</div>

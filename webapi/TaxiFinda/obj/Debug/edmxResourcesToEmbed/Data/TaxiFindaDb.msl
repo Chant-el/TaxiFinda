@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TaxiFindaDBModelStoreContainer" CdmEntityContainer="TaxiFindaDBEntities">
+    <EntitySetMapping Name="Taxis">
+      <EntityTypeMapping TypeName="TaxiFindaDBModel.Taxi">
+        <MappingFragment StoreEntitySet="Taxi">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="registration" ColumnName="registration" />
+          <ScalarProperty Name="rank_name" ColumnName="rank_name" />
+          <ScalarProperty Name="destination" ColumnName="destination" />
+          <ScalarProperty Name="price" ColumnName="price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TaxiRanks">
+      <EntityTypeMapping TypeName="TaxiFindaDBModel.TaxiRank">
+        <MappingFragment StoreEntitySet="TaxiRank">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="area" ColumnName="area" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="taxis_available" ColumnName="taxis_available" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

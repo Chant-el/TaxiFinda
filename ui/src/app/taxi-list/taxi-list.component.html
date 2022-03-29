@@ -1,0 +1,34 @@
+<!-- <mat-card>
+    <mat-card-header>Taxis List</mat-card-header>
+    <mat-card-content>
+        <mat-list>
+        <mat-list-item *ngFor="let taxi of taxis">
+            <h3 mat-line>
+                <a mat-button [routerLink]="['/taxi-edit', taxi.id]"> - </a>
+            </h3>
+        </mat-list-item>
+        </mat-list>
+    </mat-card-content>
+    <button mat-fab color="primary" [routerLink]="['/taxi-add']">Add</button>
+</mat-card> -->
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Registration</th>
+      <th scope="col">Rank</th>
+      <th scope="col">Destination</th>
+      <th scope="col">Price</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="clickable" *ngFor="let taxi of taxis; index as i">
+      <th scope="row">{{ i + 1 }}</th>
+      <td><a role="button" routerLink="/taxi-edit/{{taxi.id}}" routerLinkActive="active">{{ taxi.registration }}</a></td>
+      <td><a>{{ taxi.destination }}</a></td>
+      <td><a>{{ taxi.rank_name }}</a></td>
+      <td><a>{{ taxi.price }}</a></td>
+    </tr>
+    </tbody>
+  </table>
